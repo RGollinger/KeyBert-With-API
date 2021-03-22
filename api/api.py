@@ -7,6 +7,7 @@ app.config["DEBUG"] = True
 
 @app.route('/api/v1/keybert/', methods=['POST'])
 
+
 def api_id():
     if request.form:
         form = request.form
@@ -23,4 +24,5 @@ def keybertify(data):
     keywords = model.extract_keywords(data)
     return keywords
 
-app.run()
+if __name__ == '__main__':
+    app.run()
