@@ -13,7 +13,7 @@ def api_id():
     if request.form:
         form = request.form
     else:
-        return "Error: something wong"
+        return "Error"
 
     if 'range' not in form:
         range = 1
